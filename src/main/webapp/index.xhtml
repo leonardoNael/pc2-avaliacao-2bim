@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Avaliação</title>
+</h:head>
+<h:body>
+
+	<p:growl id="msgs" showDetail="false" life="7000" sticky="false" autoUpdate="true"/>
+
+	<h:form id="form">
+		
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Instrumento: "/>
+			<p:inputText
+				required="true"
+				label="Instrumento"
+				value="" />
+				
+			<h:outputLabel value="Tipo:"/>
+			<h:panelGroup>
+				<p:pickList label="Tipo" required="true" >
+					<f:facet name="sourceCaption">Corda</f:facet>
+					<f:facet name="targetCaption">Sopro</f:facet>
+					<f:facet name="targetCaption">Percussão</f:facet>					
+				</p:pickList>	
+			</h:panelGroup>
+			
+			<h:outputLabel value="Marca: "/>
+			<p:inputText
+				required="true"
+				label="Marca"
+				value="" />
+				
+			<h:outputLabel value="Preço: "/>
+			<p:inputText
+				required="true"
+				label="Preco:"
+				value="" />				
+		</h:panelGrid>
+		
+		<h:panelGrid columns="4">
+			<p:commandButton value="Novo" actionListener="#{}"/>
+			<p:commandButton value="Cadastrar" actionListener="#{}"/>
+			<p:commandButton value="Atualizar" actionListener="#{}"/>
+			<p:commandButton value="Excluir" actionListener="#{}"/>
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+</html>
